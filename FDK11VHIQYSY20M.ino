@@ -13,6 +13,7 @@ long tm,t,d; //variables to record time in seconds
  int joyPin2 = 1;                 // slider variable connecetd to analog pin 1
  int value1 = 0;                  // variable to read the value from the analog pin 0
  int value2 = 0;  
+ int repCheck = 0;
 void setup()
 {
   Serial.begin(9600);
@@ -28,26 +29,29 @@ void loop()
 {
 
 
-
+  
   value1 = analogRead(joyPin1);  
   // this small pause is needed between reading
   // analog pins, otherwise we get the same value twice
-  delay(100);            
+              
   // reads the value of the variable resistor
   value2 = analogRead(joyPin2);  
 
   digitalWrite(ledPin, HIGH);          
-  delay(value1);
+  //delay(value1);
   digitalWrite(ledPin, LOW);
-  delay(value2);
-  Serial.print('J');
-  Serial.print(treatValue(value1));
-  Serial.println(treatValue(value2));
-  //required for converting time to seconds
-  tm = millis();
-  t = tm/1000;
-  d = tm%1000;
+  //delay(value2);
 
+  if(treatValue(value1) + treatValue(value2) !=repCheck){
+    Serial.print(treatValue(value1));
+    Serial.println(treatValue(value2));
+    
+    //required for converting time to seconds
+    tm = millis();
+    t = tm/1000;
+    d = tm%1000;
+    repCheck = treatValue(value1)+treatValue(value2);
+  }
   Serial.flush();
 
   //printing time in seconds
@@ -56,5 +60,5 @@ void loop()
   //printing temperature sensor values
 
   
-  delay(2000);//delay of 2 seconds
+  delay(2);//delay of 2 seconds
 }
