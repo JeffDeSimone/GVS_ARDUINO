@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\SC\\GVS\\GVS\\GVS\\GVS.csproj": {}
+  },
+  "projects": {
+    "C:\\SC\\GVS\\GVS\\GVS\\GVS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\SC\\GVS\\GVS\\GVS\\GVS.csproj",
+        "projectName": "GVS",
+        "projectPath": "C:\\SC\\GVS\\GVS\\GVS\\GVS.csproj",
+        "packagesPath": "C:\\Users\\jeff\\.nuget\\packages\\",
+        "outputPath": "C:\\SC\\GVS\\GVS\\GVS\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jeff\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "LiveCharts.WinForms": {
+              "target": "Package",
+              "version": "[0.9.7.1, )"
+            },
+            "System.IO.Ports": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "YshXaf.DevExpress.XtraCharts_yesfree": {
+              "target": "Package",
+              "version": "[18.2.5, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@
  * CONNECT TO OUTGOING PORT HC-05 'DEV-B' TO VIEW DATA ON SERIAL MONITOR
  * USE THIS SKETCH ONLY FOR VIEWING SENSOR DATA ON SERIAL MONITOR.....NOT FOR FILE WRITING
  */
+#include <math.h>
 
 long tm,t,d; //variables to record time in seconds
 
@@ -12,7 +13,7 @@ long tm,t,d; //variables to record time in seconds
  int joyPin1 = 1;                 // slider variable connecetd to analog pin 0
  int joyPin2 = 0;                 // slider variable connecetd to analog pin 1
  int value1 = 0;                  // variable to read the value from the analog pin 0
- int value2 = 0;  
+ int value2 = 512;  
  int repCheck = 0;
  
 void setup()
@@ -41,13 +42,19 @@ void loop()
   //delay(value2);
 
   if(value1 != repCheck){
-    Serial.println(value1);
+    float rad = atan2 (value1-512, value2);
+    //Serial.print("TIME: "+ String(t)+"    ");
+    Serial.println(rad);
+    
  
     //required for converting time to seconds
+    tm = millis();
+    t = tm/1000;
 
+    Serial.flush();
     repCheck = value1;
   }
-  Serial.flush();
+  
 
-  delay(2);//delay of 2 seconds
+  delay(50);//delay of 2 seconds
 }

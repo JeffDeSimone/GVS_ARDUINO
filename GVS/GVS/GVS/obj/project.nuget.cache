@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "ISqeHCV/xlP+iajeEyCWQsYcT5EAxORgBHuGrArhL4/uGD76yT3KPhLVFh/eozFXDk+s4TlU+U/FsSv4ypo7aA==",
+  "success": true,
+  "projectFilePath": "C:\\SC\\GVS\\GVS\\GVS\\GVS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jeff\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
+    "C:\\Users\\jeff\\.nuget\\packages\\livecharts.winforms\\0.9.7.1\\livecharts.winforms.0.9.7.1.nupkg.sha512",
+    "C:\\Users\\jeff\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",
+    "C:\\Users\\jeff\\.nuget\\packages\\system.io.ports\\4.7.0\\system.io.ports.4.7.0.nupkg.sha512",
+    "C:\\Users\\jeff\\.nuget\\packages\\yshxaf.devexpress.charts.core_yesfree\\18.2.5\\yshxaf.devexpress.charts.core_yesfree.18.2.5.nupkg.sha512",
+    "C:\\Users\\jeff\\.nuget\\packages\\yshxaf.devexpress.data_yesfree\\18.2.5\\yshxaf.devexpress.data_yesfree.18.2.5.nupkg.sha512",
+    "C:\\Users\\jeff\\.nuget\\packages\\yshxaf.devexpress.pdf.core_yesfree\\18.2.5\\yshxaf.devexpress.pdf.core_yesfree.18.2.5.nupkg.sha512",
+    "C:\\Users\\jeff\\.nuget\\packages\\yshxaf.devexpress.printing.core_yesfree\\18.2.5\\yshxaf.devexpress.printing.core_yesfree.18.2.5.nupkg.sha512",
+    "C:\\Users\\jeff\\.nuget\\packages\\yshxaf.devexpress.xtracharts_yesfree\\18.2.5\\yshxaf.devexpress.xtracharts_yesfree.18.2.5.nupkg.sha512"
+  ],
+  "logs": []
+}

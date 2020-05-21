@@ -1,0 +1,525 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.8": {
+      "LiveCharts/0.9.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/LiveCharts.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.dll": {}
+        }
+      },
+      "LiveCharts.WinForms/0.9.7.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7",
+          "LiveCharts.Wpf": "0.9.7"
+        },
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System.Xaml",
+          "WindowsBase",
+          "WindowsFormsIntegration"
+        ],
+        "compile": {
+          "lib/net45/LiveCharts.WinForms.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.WinForms.dll": {}
+        }
+      },
+      "LiveCharts.Wpf/0.9.7": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7"
+        },
+        "compile": {
+          "lib/net45/LiveCharts.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Wpf.dll": {}
+        }
+      },
+      "System.IO.Ports/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.IO.Ports.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.IO.Ports.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux/lib/netstandard2.0/System.IO.Ports.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx/lib/netstandard2.0/System.IO.Ports.dll": {
+            "assetType": "runtime",
+            "rid": "osx"
+          },
+          "runtimes/win/lib/net461/System.IO.Ports.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "YshXaf.DevExpress.Charts.Core_yesfree/18.2.5": {
+        "type": "package",
+        "dependencies": {
+          "YshXaf.DevExpress.Data_yesfree": "[18.2.5, 18.2.5.1)"
+        },
+        "compile": {
+          "lib/net40/DevExpress.Charts.v18.2.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DevExpress.Charts.v18.2.Core.dll": {}
+        }
+      },
+      "YshXaf.DevExpress.Data_yesfree/18.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/net40/DevExpress.Data.v18.2.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DevExpress.Data.v18.2.dll": {}
+        },
+        "resource": {
+          "lib/net40/zh-Hans/DevExpress.Data.v18.2.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "YshXaf.DevExpress.Pdf.Core_yesfree/18.2.5": {
+        "type": "package",
+        "dependencies": {
+          "YshXaf.DevExpress.Data_yesfree": "[18.2.5, 18.2.5.1)"
+        },
+        "compile": {
+          "lib/net40/DevExpress.Pdf.v18.2.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DevExpress.Pdf.v18.2.Core.dll": {}
+        },
+        "resource": {
+          "lib/net40/zh-Hans/DevExpress.Pdf.v18.2.Core.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "YshXaf.DevExpress.Printing.Core_yesfree/18.2.5": {
+        "type": "package",
+        "dependencies": {
+          "YshXaf.DevExpress.Data_yesfree": "[18.2.5, 18.2.5.1)",
+          "YshXaf.DevExpress.Pdf.Core_yesfree": "[18.2.5, 18.2.5.1)"
+        },
+        "compile": {
+          "lib/net40/DevExpress.Printing.v18.2.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DevExpress.Printing.v18.2.Core.dll": {}
+        },
+        "resource": {
+          "lib/net40/zh-Hans/DevExpress.Printing.v18.2.Core.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "YshXaf.DevExpress.XtraCharts_yesfree/18.2.5": {
+        "type": "package",
+        "dependencies": {
+          "YshXaf.DevExpress.Charts.Core_yesfree": "[18.2.5, 18.2.5.1)",
+          "YshXaf.DevExpress.Data_yesfree": "[18.2.5, 18.2.5.1)",
+          "YshXaf.DevExpress.Printing.Core_yesfree": "[18.2.5, 18.2.5.1)"
+        },
+        "compile": {
+          "lib/net40/DevExpress.XtraCharts.v18.2.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DevExpress.XtraCharts.v18.2.dll": {}
+        },
+        "resource": {
+          "lib/net40/zh-Hans/DevExpress.XtraCharts.v18.2.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win7-x86": {
+      "LiveCharts/0.9.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/LiveCharts.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.dll": {}
+        }
+      },
+      "LiveCharts.WinForms/0.9.7.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7",
+          "LiveCharts.Wpf": "0.9.7"
+        },
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System.Xaml",
+          "WindowsBase",
+          "WindowsFormsIntegration"
+        ],
+        "compile": {
+          "lib/net45/LiveCharts.WinForms.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.WinForms.dll": {}
+        }
+      },
+      "LiveCharts.Wpf/0.9.7": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7"
+        },
+        "compile": {
+          "lib/net45/LiveCharts.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Wpf.dll": {}
+        }
+      },
+      "System.IO.Ports/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.IO.Ports.dll": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/net461/System.IO.Ports.dll": {}
+        }
+      },
+      "YshXaf.DevExpress.Charts.Core_yesfree/18.2.5": {
+        "type": "package",
+        "dependencies": {
+          "YshXaf.DevExpress.Data_yesfree": "[18.2.5, 18.2.5.1)"
+        },
+        "compile": {
+          "lib/net40/DevExpress.Charts.v18.2.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DevExpress.Charts.v18.2.Core.dll": {}
+        }
+      },
+      "YshXaf.DevExpress.Data_yesfree/18.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/net40/DevExpress.Data.v18.2.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DevExpress.Data.v18.2.dll": {}
+        },
+        "resource": {
+          "lib/net40/zh-Hans/DevExpress.Data.v18.2.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "YshXaf.DevExpress.Pdf.Core_yesfree/18.2.5": {
+        "type": "package",
+        "dependencies": {
+          "YshXaf.DevExpress.Data_yesfree": "[18.2.5, 18.2.5.1)"
+        },
+        "compile": {
+          "lib/net40/DevExpress.Pdf.v18.2.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DevExpress.Pdf.v18.2.Core.dll": {}
+        },
+        "resource": {
+          "lib/net40/zh-Hans/DevExpress.Pdf.v18.2.Core.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "YshXaf.DevExpress.Printing.Core_yesfree/18.2.5": {
+        "type": "package",
+        "dependencies": {
+          "YshXaf.DevExpress.Data_yesfree": "[18.2.5, 18.2.5.1)",
+          "YshXaf.DevExpress.Pdf.Core_yesfree": "[18.2.5, 18.2.5.1)"
+        },
+        "compile": {
+          "lib/net40/DevExpress.Printing.v18.2.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DevExpress.Printing.v18.2.Core.dll": {}
+        },
+        "resource": {
+          "lib/net40/zh-Hans/DevExpress.Printing.v18.2.Core.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "YshXaf.DevExpress.XtraCharts_yesfree/18.2.5": {
+        "type": "package",
+        "dependencies": {
+          "YshXaf.DevExpress.Charts.Core_yesfree": "[18.2.5, 18.2.5.1)",
+          "YshXaf.DevExpress.Data_yesfree": "[18.2.5, 18.2.5.1)",
+          "YshXaf.DevExpress.Printing.Core_yesfree": "[18.2.5, 18.2.5.1)"
+        },
+        "compile": {
+          "lib/net40/DevExpress.XtraCharts.v18.2.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DevExpress.XtraCharts.v18.2.dll": {}
+        },
+        "resource": {
+          "lib/net40/zh-Hans/DevExpress.XtraCharts.v18.2.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LiveCharts/0.9.7": {
+      "sha512": "p4xyBrUaNNfkWZSNsIle0r51cyVyFg0Yi0uBRZM5GQtdFiA/7guZHlffFyNUILIdux10Ch2hUaJpcZENVU9aaQ==",
+      "type": "package",
+      "path": "livecharts/0.9.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/LiveCharts.dll",
+        "lib/net40/LiveCharts.pdb",
+        "lib/net40/LiveCharts.xml",
+        "lib/net45/LiveCharts.dll",
+        "lib/net45/LiveCharts.pdb",
+        "lib/net45/LiveCharts.xml",
+        "lib/portable-net45+win8+wp8/LiveCharts.XML",
+        "lib/portable-net45+win8+wp8/LiveCharts.dll",
+        "lib/portable-net45+win8+wp8/LiveCharts.pdb",
+        "livecharts.0.9.7.nupkg.sha512",
+        "livecharts.nuspec",
+        "readme.txt"
+      ]
+    },
+    "LiveCharts.WinForms/0.9.7.1": {
+      "sha512": "eCBsVaxpUKHLpvlJEAhm+BQDWltnzc4VFhM4k4gJ+MsqyGQ/aq/AOWqTWx8OSJ0H52mDTJ1tQjErTYWeikLEOA==",
+      "type": "package",
+      "path": "livecharts.winforms/0.9.7.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/LiveCharts.WinForms.XML",
+        "lib/net40/LiveCharts.WinForms.dll",
+        "lib/net40/LiveCharts.WinForms.pdb",
+        "lib/net45/LiveCharts.WinForms.XML",
+        "lib/net45/LiveCharts.WinForms.dll",
+        "lib/net45/LiveCharts.WinForms.pdb",
+        "livecharts.winforms.0.9.7.1.nupkg.sha512",
+        "livecharts.winforms.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "LiveCharts.Wpf/0.9.7": {
+      "sha512": "lv6YZoK0B4yWykMq5b9grZXtIbTj+OWu4sVN9GDpdgV6zffu64m4d5CW8KSjfSl9rB8VU649x1NZvhoU67hCDg==",
+      "type": "package",
+      "path": "livecharts.wpf/0.9.7",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/LiveCharts.Wpf.XML",
+        "lib/net40/LiveCharts.Wpf.dll",
+        "lib/net40/LiveCharts.Wpf.pdb",
+        "lib/net45/LiveCharts.Wpf.XML",
+        "lib/net45/LiveCharts.Wpf.dll",
+        "lib/net45/LiveCharts.Wpf.pdb",
+        "livecharts.wpf.0.9.7.nupkg.sha512",
+        "livecharts.wpf.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "System.IO.Ports/4.7.0": {
+      "sha512": "tNHiZcdskfRpxU7LBBlA69YYgBqWMBE/JDdmrEIDa4iw944VK1u4+B0FeSls1FUm+Pm4X/Fl0fSGqi8MDhb8/Q==",
+      "type": "package",
+      "path": "system.io.ports/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.IO.Ports.dll",
+        "lib/net461/System.IO.Ports.xml",
+        "lib/netstandard2.0/System.IO.Ports.dll",
+        "lib/netstandard2.0/System.IO.Ports.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net461/System.IO.Ports.dll",
+        "ref/net461/System.IO.Ports.xml",
+        "ref/netstandard2.0/System.IO.Ports.dll",
+        "ref/netstandard2.0/System.IO.Ports.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/linux/lib/netstandard2.0/System.IO.Ports.dll",
+        "runtimes/linux/lib/netstandard2.0/System.IO.Ports.xml",
+        "runtimes/osx/lib/netstandard2.0/System.IO.Ports.dll",
+        "runtimes/osx/lib/netstandard2.0/System.IO.Ports.xml",
+        "runtimes/win/lib/net461/System.IO.Ports.dll",
+        "runtimes/win/lib/net461/System.IO.Ports.xml",
+        "runtimes/win/lib/netstandard2.0/System.IO.Ports.dll",
+        "runtimes/win/lib/netstandard2.0/System.IO.Ports.xml",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.io.ports.4.7.0.nupkg.sha512",
+        "system.io.ports.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "YshXaf.DevExpress.Charts.Core_yesfree/18.2.5": {
+      "sha512": "4G9MACuSh+WeltVlAdwShCEPN7IqAKUaGcZH3FoHtuydscXfHuDQwZQLRv/EZmHYA1FeYGVQ5/7DPy0OHv3OZQ==",
+      "type": "package",
+      "path": "yshxaf.devexpress.charts.core_yesfree/18.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/DevExpress.Charts.v18.2.Core.dll",
+        "lib/net40/DevExpress.Charts.v18.2.Core.pdb",
+        "yshxaf.devexpress.charts.core_yesfree.18.2.5.nupkg.sha512",
+        "yshxaf.devexpress.charts.core_yesfree.nuspec"
+      ]
+    },
+    "YshXaf.DevExpress.Data_yesfree/18.2.5": {
+      "sha512": "tceJtNFvKYGfeNKyj1/MpvmgZes0p/MM5hMpjGjikgx0VwW5nyFSibPWS0/ZQaLfaE7LGV+CsP8dmvjaE+H23A==",
+      "type": "package",
+      "path": "yshxaf.devexpress.data_yesfree/18.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/DevExpress.Data.v18.2.dll",
+        "lib/net40/DevExpress.Data.v18.2.pdb",
+        "lib/net40/DevExpress.Data.v18.2.xml",
+        "lib/net40/zh-Hans/DevExpress.Data.v18.2.resources.dll",
+        "yshxaf.devexpress.data_yesfree.18.2.5.nupkg.sha512",
+        "yshxaf.devexpress.data_yesfree.nuspec"
+      ]
+    },
+    "YshXaf.DevExpress.Pdf.Core_yesfree/18.2.5": {
+      "sha512": "Mlca9EILIq9v9rvjkMsquYbVlaAIRKVL2+QCzCoVbYd2e9sdbaZ2vtCld08vx9fueCT8vKTRzaWpbFXPS1QpwQ==",
+      "type": "package",
+      "path": "yshxaf.devexpress.pdf.core_yesfree/18.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/DevExpress.Pdf.v18.2.Core.dll",
+        "lib/net40/DevExpress.Pdf.v18.2.Core.pdb",
+        "lib/net40/DevExpress.Pdf.v18.2.Core.xml",
+        "lib/net40/zh-Hans/DevExpress.Pdf.v18.2.Core.resources.dll",
+        "yshxaf.devexpress.pdf.core_yesfree.18.2.5.nupkg.sha512",
+        "yshxaf.devexpress.pdf.core_yesfree.nuspec"
+      ]
+    },
+    "YshXaf.DevExpress.Printing.Core_yesfree/18.2.5": {
+      "sha512": "OenptoRFAccIaxn5M83LqHPgFHoOYITsHPFHkdDq4fhKvG/3L0pDQaAuS4vEDiKnzTt9aGGOQv/uspyQGWi8Yw==",
+      "type": "package",
+      "path": "yshxaf.devexpress.printing.core_yesfree/18.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/DevExpress.Printing.v18.2.Core.dll",
+        "lib/net40/DevExpress.Printing.v18.2.Core.pdb",
+        "lib/net40/DevExpress.Printing.v18.2.Core.xml",
+        "lib/net40/zh-Hans/DevExpress.Printing.v18.2.Core.resources.dll",
+        "yshxaf.devexpress.printing.core_yesfree.18.2.5.nupkg.sha512",
+        "yshxaf.devexpress.printing.core_yesfree.nuspec"
+      ]
+    },
+    "YshXaf.DevExpress.XtraCharts_yesfree/18.2.5": {
+      "sha512": "2YfW+9UutmTa6yzYceb7zQ9tVmwv7QXqsunDAeEtlb2jR9CS0FZzIO6Ty4hPdQdC5/MHItZEBRuVrhZEnaEV3Q==",
+      "type": "package",
+      "path": "yshxaf.devexpress.xtracharts_yesfree/18.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/DevExpress.XtraCharts.v18.2.dll",
+        "lib/net40/DevExpress.XtraCharts.v18.2.pdb",
+        "lib/net40/DevExpress.XtraCharts.v18.2.xml",
+        "lib/net40/zh-Hans/DevExpress.XtraCharts.v18.2.resources.dll",
+        "yshxaf.devexpress.xtracharts_yesfree.18.2.5.nupkg.sha512",
+        "yshxaf.devexpress.xtracharts_yesfree.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.8": [
+      "LiveCharts.WinForms >= 0.9.7.1",
+      "System.IO.Ports >= 4.7.0",
+      "YshXaf.DevExpress.XtraCharts_yesfree >= 18.2.5"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\jeff\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\SC\\GVS\\GVS\\GVS\\GVS.csproj",
+      "projectName": "GVS",
+      "projectPath": "C:\\SC\\GVS\\GVS\\GVS\\GVS.csproj",
+      "packagesPath": "C:\\Users\\jeff\\.nuget\\packages\\",
+      "outputPath": "C:\\SC\\GVS\\GVS\\GVS\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\jeff\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net48"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net48": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net48": {
+        "dependencies": {
+          "LiveCharts.WinForms": {
+            "target": "Package",
+            "version": "[0.9.7.1, )"
+          },
+          "System.IO.Ports": {
+            "target": "Package",
+            "version": "[4.7.0, )"
+          },
+          "YshXaf.DevExpress.XtraCharts_yesfree": {
+            "target": "Package",
+            "version": "[18.2.5, )"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win7-x86": {
+        "#import": []
+      }
+    }
+  }
+}
