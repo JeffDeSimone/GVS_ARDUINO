@@ -469,11 +469,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SC\\GVS\\GVS\\GVS\\GVS.csproj",
+      "projectUniqueName": "C:\\SC\\GVS_PROJ\\GVS\\GVS.csproj",
       "projectName": "GVS",
-      "projectPath": "C:\\SC\\GVS\\GVS\\GVS\\GVS.csproj",
+      "projectPath": "C:\\SC\\GVS_PROJ\\GVS\\GVS.csproj",
       "packagesPath": "C:\\Users\\jeff\\.nuget\\packages\\",
-      "outputPath": "C:\\SC\\GVS\\GVS\\GVS\\obj\\",
+      "outputPath": "C:\\SC\\GVS_PROJ\\GVS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jeff\\AppData\\Roaming\\NuGet\\NuGet.Config",

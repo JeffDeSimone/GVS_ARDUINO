@@ -19,12 +19,12 @@ namespace GVS
 
 
         public List<string> inList = new List<string>();
-
+        public int count;
         public MainForm()
         {
             InitializeComponent();
 
-            SerialPort mySerialPort = new SerialPort("COM5");
+            SerialPort mySerialPort = new SerialPort("COM6");
             mySerialPort.BaudRate = 9600;
             mySerialPort.Parity = Parity.None;
             mySerialPort.StopBits = StopBits.One;
@@ -36,8 +36,10 @@ namespace GVS
             chart1.Series[0].LegendText = "Degrees";
             chart1.Series[0].ChartType = SeriesChartType.Line;
             //chart1.Series[0].IsValueShownAsLabel = true;
-
             
+
+
+
            String FilePath = "C:/Temp/ACSV.csv";
            //FileStream Fs = File.Create("C:/Temp/ACSV.csv");
             Console.Read();
@@ -56,8 +58,10 @@ namespace GVS
            
             string indata = sp.ReadLine();
             //indata = indata + ",";
-      
-            File.AppendAllText("C:/Temp/ACSV.csv", indata);
+            var src = DateTime.Now;
+            var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, src.Second, src.Millisecond, 0);
+            var shm = hm.ToString();
+            File.AppendAllText("C:/Temp/ACSV.csv",src.Hour+":"+src.Minute+":"+src.Second+":"+src.Millisecond+"," + indata+",");
 
             //this.TextBox1.Text = indata;
 
@@ -65,6 +69,7 @@ namespace GVS
             SetText(indata);
             System.Threading.Thread.Sleep(8);
             inList.Clear();
+            
         }
 
 
@@ -92,6 +97,12 @@ namespace GVS
                         //decimal y = decimal.Parse(text);
                         chart1.Series[0].Points.AddY(decimal.Parse(inList[inList.Count - 1]));
                         textBox1.Text = inList[inList.Count - 1];
+                        count++;
+                        if(count > 2000)
+                        {
+                            chart1.Series[0].Points.Clear();
+                            count = 0;
+                        }
                     }
                 }
                 
