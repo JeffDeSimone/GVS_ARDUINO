@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Management;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,7 @@ using System.IO.Ports;
 using System.IO;
 using System.Configuration;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Drawing.Text;
 
 namespace GVS
 {
@@ -23,31 +25,31 @@ namespace GVS
         public MainForm()
         {
             InitializeComponent();
+            chart1.Series[0].LegendText = "Degrees";
+            chart1.Series[0].ChartType = SeriesChartType.Line;
+           String FilePath = "C:/Temp/ACSV.csv";
+            Console.Read();
 
-            SerialPort mySerialPort = new SerialPort("COM6");
+        }
+
+
+
+        private void startComPort(string comPort)
+        {
+
+            SerialPort mySerialPort = new SerialPort("COM"+comPort);
             mySerialPort.BaudRate = 9600;
             mySerialPort.Parity = Parity.None;
             mySerialPort.StopBits = StopBits.One;
             mySerialPort.DataBits = 8;
             mySerialPort.Handshake = Handshake.None;
             mySerialPort.RtsEnable = true;
+
             mySerialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
             mySerialPort.Open();
-            chart1.Series[0].LegendText = "Degrees";
-            chart1.Series[0].ChartType = SeriesChartType.Line;
-            //chart1.Series[0].IsValueShownAsLabel = true;
-            
-
-
-
-           String FilePath = "C:/Temp/ACSV.csv";
-           //FileStream Fs = File.Create("C:/Temp/ACSV.csv");
-            Console.Read();
-
-
-            //mySerialPort.Close();
 
         }
+
 
         private void DataReceivedHandler(
          object sender,
@@ -110,6 +112,16 @@ namespace GVS
             }
         }
 
-
+        private void Start_Click(object sender, EventArgs e)
+        {
+            int outParam;
+            if (int.TryParse(ComEntry.Text, out outParam)){
+                startComPort(ComEntry.Text);
+            }
+            else {
+                MessageBox.Show("Enter Numeric value for comport./n Check device manager for possible" +
+                "port number. ");
+                 }
+        }
     }
 }
