@@ -29,6 +29,17 @@ namespace GVS
             chart1.Series[0].ChartType = SeriesChartType.Line;
            String FilePath = "C:/Temp/ACSV.csv";
             Console.Read();
+            ManagementObjectSearcher mgmtObjSearcher = new ManagementObjectSearcher("SELECT * FROM Win32_LogicalDisk");
+            ManagementObjectCollection colDisks = mgmtObjSearcher.Get();
+
+
+            //MAY BE ABLE TO ACTUALLY LOOK THROUGH COMPORTS, too tired going to bed. Last night you couldn't 
+            //look at ports because the the loop fucked it dunno why. this doesn't. Investigate.
+            // ALSO TODO: Make the stop button work.
+            foreach (ManagementObject x in colDisks)
+            {
+                Console.WriteLine("k");
+            }
 
         }
 

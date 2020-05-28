@@ -41,7 +41,7 @@ void loop()
   digitalWrite(ledPin, LOW);
   //delay(value2);
 
-  if(value1 != repCheck){
+  //if(value1 != repCheck){
     float rad = atan2 (value1-512, value2);
     //Serial.print("TIME: "+ String(t)+"    ");
     Serial.println(rad);
@@ -52,8 +52,8 @@ void loop()
     t = tm/1000;
 
     Serial.flush();
-    repCheck = value1;
-  }
+   // repCheck = value1;
+//  }
   
 
   delay(50);//delay of 2 seconds
