@@ -13,13 +13,14 @@ using System.IO;
 using System.Configuration;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Drawing.Text;
+using DevExpress.XtraExport.Csv;
 
 namespace GVS
 {
     public partial class MainForm : Form
     {
 
-
+        
         public List<string> inList = new List<string>();
         public int count;
         public MainForm()
@@ -27,19 +28,14 @@ namespace GVS
             InitializeComponent();
             chart1.Series[0].LegendText = "Degrees";
             chart1.Series[0].ChartType = SeriesChartType.Line;
-           String FilePath = "C:/Temp/ACSV.csv";
+         
             Console.Read();
-            ManagementObjectSearcher mgmtObjSearcher = new ManagementObjectSearcher("SELECT * FROM Win32_LogicalDisk");
-            ManagementObjectCollection colDisks = mgmtObjSearcher.Get();
+
+            //set up the default file location
+            ComEntry.Text = "7";
+            fileOutPut.Text = "C:\\temp\\GVS_Output.csv";
 
 
-            //MAY BE ABLE TO ACTUALLY LOOK THROUGH COMPORTS, too tired going to bed. Last night you couldn't 
-            //look at ports because the the loop fucked it dunno why. this doesn't. Investigate.
-            // ALSO TODO: Make the stop button work.
-            foreach (ManagementObject x in colDisks)
-            {
-                Console.WriteLine("k");
-            }
 
         }
 
@@ -74,7 +70,7 @@ namespace GVS
             var src = DateTime.Now;
             var hm = new DateTime(src.Year, src.Month, src.Day, src.Hour, src.Minute, src.Second, src.Millisecond, 0);
             var shm = hm.ToString();
-            File.AppendAllText("C:/Temp/ACSV.csv",src.Hour+":"+src.Minute+":"+src.Second+":"+src.Millisecond+"," + indata+",");
+            File.AppendAllText(fileOutPut.Text,src.Hour+":"+src.Minute+":"+src.Second+":"+src.Millisecond+"," + indata+",");
 
             //this.TextBox1.Text = indata;
 
@@ -125,6 +121,21 @@ namespace GVS
 
         private void Start_Click(object sender, EventArgs e)
         {
+
+            try
+            {
+                if (!File.Exists(fileOutPut.Text) )
+                {
+                    string message = "File not found, creating at: " + fileOutPut.Text;
+                    MessageBox.Show(message);
+                    File.Create(fileOutPut.Text).Dispose();
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                    MessageBox.Show("Invalid Path: "+fileOutPut.Text);
+            }
             int outParam;
             if (int.TryParse(ComEntry.Text, out outParam)){
                 startComPort(ComEntry.Text);
@@ -133,6 +144,19 @@ namespace GVS
                 MessageBox.Show("Enter Numeric value for comport./n Check device manager for possible" +
                 "port number. ");
                  }
+        }
+
+        private void browseFileButton_Click(object sender, EventArgs e)
+        {
+            FileDialog fdlg = new SaveFileDialog();
+            fdlg.InitialDirectory = @"c:\";
+            fdlg.DefaultExt = "csv";
+
+           
+            if (fdlg.ShowDialog() == DialogResult.OK)
+            {
+                fileOutPut.Text = fdlg.FileName;
+            }
         }
     }
 }
